@@ -6,171 +6,112 @@
 <meta name="theme-color" content="#f05a1a">
 <title>Instrucciones - Tickets y Garantías</title>
 <style>
-:root { --primary:#f05a1a; --primary-dark:#c94710; --text:#252525; --muted:#6d6d6d; --line:#e9e9e9; --soft:#fff5f0; --success:#2e7d32; --warning:#8a6100; --danger:#b3261e; }
+:root { --primary:#f05a1a; --primary-dark:#c94710; --text:#252525; --muted:#666; --line:#e5e5e5; --soft:#fff5f0; --danger:#b3261e; --success:#2e7d32; }
 * { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { margin:0; background:#f6f6f6; color:var(--text); font-family:Arial,Helvetica,sans-serif; line-height:1.62; }
-header { background:var(--primary); color:#fff; }
-.header-inner { max-width:920px; margin:0 auto; padding:26px 18px; }
-.brand { margin:0; font-size:27px; font-weight:700; }
-.subtitle { margin:4px 0 0; opacity:.94; font-size:15px; }
-main { max-width:920px; margin:24px auto; padding:0 14px; }
-.card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:24px; box-shadow:0 4px 18px rgba(0,0,0,.05); }
-h1,h2,h3 { line-height:1.25; }
-h1 { margin:0 0 18px; font-size:28px; }
-h2 { margin:30px 0 10px; padding-bottom:7px; color:var(--primary-dark); font-size:21px; border-bottom:2px solid var(--primary); }
-h3 { margin:20px 0 8px; font-size:17px; }
-p { margin:0 0 14px; }
-ul,ol { margin:8px 0 16px 22px; padding:0; }
-li { margin:6px 0; }
-.notice { margin:18px 0; padding:14px 16px; background:var(--soft); border-left:4px solid var(--primary); border-radius:8px; }
-.warning { margin:18px 0; padding:14px 16px; background:#fff8e1; color:var(--warning); border-left:4px solid #f9a825; border-radius:8px; }
-.error { margin:18px 0; padding:14px 16px; background:#ffebee; color:var(--danger); border-left:4px solid var(--danger); border-radius:8px; }
-.success { margin:18px 0; padding:14px 16px; background:#e8f5e9; color:var(--success); border-left:4px solid var(--success); border-radius:8px; }
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:18px; }
-.box { padding:16px; border:1px solid var(--line); border-radius:10px; background:#fff; }
-.status { display:inline-block; margin:2px 6px 2px 0; padding:4px 9px; border-radius:12px; font-size:13px; font-weight:700; }
+body { margin:0; background:#fff; color:var(--text); font-family:Arial,Helvetica,sans-serif; font-size:16px; line-height:1.45; }
+main { max-width:920px; margin:0 auto; padding:18px 16px 28px; }
+h1 { margin:0 0 12px; font-size:27px; line-height:1.2; }
+h2 { margin:20px 0 6px; padding-bottom:4px; border-bottom:1px solid var(--line); color:var(--primary-dark); font-size:20px; line-height:1.25; }
+p { margin:0 0 8px; }
+ul,ol { margin:5px 0 10px 21px; padding:0; }
+li { margin:2px 0; }
+.notice { margin:10px 0; padding:10px 12px; background:var(--soft); border-left:4px solid var(--primary); }
+.warning { margin:10px 0; padding:10px 12px; background:#fff8e1; border-left:4px solid #f9a825; }
+.error { margin:10px 0; padding:10px 12px; background:#ffebee; border-left:4px solid var(--danger); }
+.success { margin:10px 0; padding:10px 12px; background:#e8f5e9; border-left:4px solid var(--success); }
+.path { margin:8px 0 10px; padding:9px 11px; background:#f3f3f3; font-family:Consolas,monospace; overflow-wrap:anywhere; }
+.status { display:inline-block; padding:2px 7px; border-radius:10px; font-size:12px; font-weight:bold; }
 .pending { background:#fff3cd; color:#745500; }
 .synced { background:#e8f5e9; color:#216e2b; }
-code { background:#f1f1f1; padding:2px 5px; border-radius:4px; overflow-wrap:anywhere; }
-.path { margin:12px 0 18px; padding:12px 14px; background:#f1f1f1; border-radius:8px; font-family:Consolas,monospace; overflow-wrap:anywhere; }
-strong { color:#111; }
-footer { max-width:920px; margin:0 auto; padding:8px 18px 30px; color:var(--muted); text-align:center; font-size:13px; }
-@media (max-width:600px) { .header-inner { padding:20px 16px; } .brand { font-size:22px; } main { margin:14px auto; padding:0 10px; } .card { padding:18px; border-radius:10px; } h1 { font-size:24px; } h2 { font-size:19px; } }
+code { background:#f1f1f1; padding:1px 4px; border-radius:3px; overflow-wrap:anywhere; }
+@media (max-width:600px) { main { padding:14px 12px 24px; } h1 { font-size:24px; } h2 { font-size:18px; } }
 </style>
 </head>
 <body>
-
 <main>
-<article class="card">
 <h1>Instrucciones de funcionamiento</h1>
-<div class="notice"><strong>Principio principal:</strong> los datos guardados en el teléfono son los datos auténticos. Google Drive se utiliza para conservar una única copia completa de seguridad, visible y verificable.</div>
+<div class="notice"><strong>Funcionamiento principal:</strong> los productos y archivos guardados en el teléfono son los datos auténticos. Google Drive conserva una única copia completa de seguridad.</div>
 
-<h2>1. Primera configuración</h2>
-<p>La primera vez que se inicia la aplicación se muestra obligatoriamente la pantalla de configuración inicial.</p>
+<h2>1. Configuración inicial</h2>
+<p>La primera vez que se abre la aplicación es obligatorio seleccionar o crear la carpeta de Google Drive donde se guardará la copia.</p>
 <ol>
 <li>Pulsa <strong>Seleccionar o crear carpeta</strong>.</li>
-<li>En el selector de Google Drive, abre una carpeta existente o crea una nueva.</li>
-<li>Confirma la carpeta.</li>
-<li>Comprueba que la ruta seleccionada aparece en pantalla.</li>
-<li>Pulsa <strong>Continuar</strong>.</li>
+<li>Selecciona una carpeta de Google Drive o crea una nueva.</li>
+<li>Comprueba la ruta mostrada y pulsa <strong>Continuar</strong>.</li>
 </ol>
-<p>La aplicación no permite continuar hasta disponer de una carpeta válida con permisos de lectura y escritura.</p>
 <div class="path">Google Drive / carpeta seleccionada / Tickets_y_Garantias.zip</div>
 
 <h2>2. Listado de productos</h2>
-<div class="grid">
-<div class="box"><strong>Buscar</strong><p>Escribe parte del nombre, la tienda o el identificador del producto.</p></div>
-<div class="box"><strong>Ordenar</strong><p>Ordena por nombre, compra, garantía, devolución o fecha de creación.</p></div>
-<div class="box"><strong>Abrir</strong><p>Pulsa una ficha para consultar o modificar sus datos.</p></div>
-<div class="box"><strong>Nuevo producto</strong><p>Pulsa el botón correspondiente para crear una ficha nueva.</p></div>
-</div>
-<p>El desplegable de ordenación utiliza filas compactas para mostrar más opciones sin ocupar innecesariamente toda la pantalla.</p>
-
-<h2>3. Crear un producto</h2>
-<p>Para guardar una ficha deben completarse los siguientes datos obligatorios:</p>
 <ul>
-<li><strong>Nombre del producto.</strong></li>
-<li><strong>Fecha de compra.</strong> No puede ser posterior al día actual.</li>
-<li><strong>Fecha límite de garantía.</strong> No puede ser anterior a la fecha de compra.</li>
-<li><strong>Ticket o factura.</strong> Debe añadirse al menos una fotografía del ticket o una factura PDF.</li>
+<li>Utiliza <strong>Buscar</strong> para localizar productos por nombre, tienda, ID o datos adicionales.</li>
+<li>El botón de ordenación permite ordenar por nombre, fecha de compra, fecha de garantía o fecha de creación.</li>
+<li>Marca <strong>Ocultar garantías caducadas</strong> para no mostrar los productos cuya garantía ya finalizó.</li>
+<li>Pulsa una ficha para abrirla o modificarla.</li>
+<li>Pulsa la fotografía de portada para verla ampliada.</li>
 </ul>
-<p>La tienda, la fecha límite de devolución y las fotografías del producto son opcionales.</p>
-<p>Cuando el guardado local termina correctamente, la aplicación muestra únicamente el mensaje <strong>Guardado</strong>.</p>
-<div class="success"><strong>El producto existe desde ese momento en el teléfono.</strong> Un problema de Internet o de Google Drive no debe impedir el guardado local.</div>
 
-<h2>4. Fotografías, tickets y facturas PDF</h2>
+<h2>3. Crear o editar un producto</h2>
+<p>Los datos obligatorios son el nombre, la fecha de compra, la fecha límite de garantía y al menos una foto del ticket o una factura PDF.</p>
+<p>La tienda, las fotografías del producto y <strong>Datos adicionales</strong> son opcionales. Datos adicionales permite guardar números de serie, observaciones, condiciones, teléfonos u otra información útil.</p>
+<p>La aplicación ya no utiliza el campo Fecha límite de devolución.</p>
+<div class="success">Cuando el producto queda guardado correctamente en el teléfono aparece el mensaje <strong>Guardado</strong>.</div>
+
+<h2>4. Fotografías, tickets y facturas</h2>
 <ul>
-<li>Puedes hacer fotografías con la cámara o seleccionar imágenes existentes.</li>
+<li>Puedes hacer fotografías o elegir imágenes existentes.</li>
 <li>Puedes añadir varias fotografías del producto y del ticket.</li>
-<li>Puedes incorporar una o varias facturas PDF.</li>
-<li>Los archivos seleccionados se copian al almacenamiento interno de la aplicación.</li>
-<li>La fotografía marcada como portada aparece en el listado de productos.</li>
-<li>Pulsa una fotografía para verla ampliada.</li>
-<li>Pulsa una factura PDF para abrirla en el visor interno de la aplicación, revisar todas sus páginas y ampliar el contenido.</li>
-</ul>
-<p>El visor PDF interno evita depender de que el teléfono tenga instalada una aplicación externa compatible.</p>
-
-<h2>5. Editar y eliminar</h2>
-<ul>
-<li>Abre un producto para modificar datos, añadir archivos, eliminar adjuntos o cambiar la portada.</li>
-<li>Al guardar una modificación, el producto queda pendiente de incorporarse a la siguiente copia completa.</li>
-<li>Al eliminar un producto se eliminan también sus fotografías, tickets y facturas del almacenamiento local.</li>
+<li>Puedes añadir una o varias facturas PDF.</li>
+<li>Pulsa una fotografía o un PDF para inspeccionarlo.</li>
+<li>Los archivos seleccionados se copian al almacenamiento privado de la aplicación.</li>
 </ul>
 
-<h2>6. Garantía finalizada</h2>
-<p>Cuando la fecha de garantía ya ha vencido, la ficha muestra el sello <strong>FINALIZADA</strong>. El sello es únicamente informativo y no elimina ni modifica el producto.</p>
+<h2>5. Garantía finalizada y avisos</h2>
+<p>Cuando la garantía ha vencido, la ficha muestra el sello <strong>FINALIZADA</strong>.</p>
+<p>En <strong>Configuración → Aviso finalización garantía</strong> puedes indicar los días de antelación. Se genera una notificación independiente por producto y al pulsarla se abre directamente su ficha.</p>
 
-<h2>7. Estados de copia</h2>
-<p><span class="status pending">PENDIENTE</span> El producto está guardado en el teléfono, pero todavía no forma parte de una copia completa confirmada.</p>
-<p><span class="status synced">SINCRONIZADO</span> El producto está incluido en una copia ZIP que fue subida y verificada correctamente.</p>
-<p>El estado de copia no determina si el producto existe localmente. Un producto pendiente continúa disponible y puede abrirse o editarse.</p>
+<h2>6. Estados de la copia</h2>
+<p><span class="status pending">PENDIENTE</span> El producto está guardado en el teléfono, pero todavía no forma parte de la última copia confirmada.</p>
+<p><span class="status synced">SINCRONIZADO</span> El producto está incluido en el ZIP guardado y comprobado en la carpeta seleccionada.</p>
+<p>Un producto pendiente continúa existiendo localmente y puede abrirse, editarse o eliminarse.</p>
 
-<h2>8. Copia de seguridad completa</h2>
-<p>La aplicación mantiene una sola copia visible:</p>
+<h2>7. Copia completa en Google Drive</h2>
+<p>La aplicación mantiene un único archivo visible:</p>
 <div class="path">Tickets_y_Garantias.zip</div>
-<p>El procedimiento es el siguiente:</p>
 <ol>
-<li>Lee todos los productos y archivos guardados localmente.</li>
-<li>Genera una copia ZIP completa y coherente.</li>
-<li>Comprueba localmente la estructura, tamaños y huellas SHA-256.</li>
-<li>Sube una nueva copia temporal a la carpeta seleccionada.</li>
-<li>Vuelve a leer la copia subida y verifica su tamaño, contenido y huella.</li>
-<li>Solo cuando la copia nueva es válida sustituye la copia anterior.</li>
-<li>Los productos incluidos pasan a estado sincronizado.</li>
+<li>Lee todos los productos y archivos locales.</li>
+<li>Genera un ZIP completo con un manifiesto de tamaños y huellas SHA-256.</li>
+<li>Valida el ZIP antes de escribirlo en Drive.</li>
+<li>Conserva la copia anterior mientras prepara y comprueba la nueva.</li>
+<li>Solo después de verificar la nueva copia sustituye la anterior.</li>
 </ol>
-<p>El ZIP contiene <code>manifest.json</code>, <code>productos.json</code> y todos los archivos asociados.</p>
-<div class="warning"><strong>Solo existe una versión definitiva.</strong> Los nombres temporales utilizados durante la sustitución se eliminan al terminar correctamente.</div>
+<div class="warning">La copia solo se intenta con una conexión Wi-Fi validada. Si no hay Wi-Fi, la copia anterior debe permanecer intacta.</div>
+<div class="error">Sin la API oficial de Drive, Android puede confirmar que la aplicación de Drive ha aceptado el archivo, pero no informa del instante exacto en que termina la subida al servidor.</div>
 
-<h2>9. Copia manual y frecuencia backup</h2>
-<p>Para realizar una copia inmediata, pulsa el icono de sincronización situado en la barra superior del listado.</p>
-<p>En <strong>Configuración</strong> puedes indicar cada cuántas horas debe intentarse la copia automática:</p>
+<h2>8. Copia manual y frecuencia backup</h2>
+<p>Pulsa el icono de sincronización de la barra superior para generar una copia inmediata.</p>
+<p>En <strong>Configuración → Frecuencia backup</strong> puedes indicar cada cuántas horas debe intentarse la copia automática.</p>
+
+<h2>9. Restaurar una copia</h2>
+<p>En <strong>Configuración → Restaurar una copia</strong> puedes importar <code>Tickets_y_Garantias.zip</code>.</p>
+<p>La importación valida primero todo el contenido. Si es correcta, sustituye los productos y archivos locales. Si falla, conserva los datos existentes.</p>
+
+<h2>10. Tamaño de texto y zoom</h2>
 <ul>
-<li>Mínimo: <strong>1 hora</strong>.</li>
-<li>Máximo: <strong>720 horas</strong>.</li>
-<li>Valor inicial: <strong>24 horas</strong>.</li>
-</ul>
-<p>Android puede retrasar una tarea automática por falta de red, ahorro de batería u otras restricciones del sistema.</p>
-
-<h2>10. Importar y restaurar una copia ZIP</h2>
-<p>Esta opción permite recuperar la información después de reinstalar la aplicación o borrar sus datos.</p>
-<ol>
-<li>Abre <strong>Configuración</strong>.</li>
-<li>Pulsa <strong>Importar copia ZIP</strong>.</li>
-<li>Selecciona el archivo <code>Tickets_y_Garantias.zip</code>.</li>
-<li>Confirma que deseas sustituir el contenido local.</li>
-<li>Espera a que termine la validación y restauración.</li>
-</ol>
-<div class="error"><strong>La importación sustituye todos los productos locales existentes.</strong> Antes de aplicar ningún cambio, la aplicación comprueba el formato, el manifiesto, todos los tamaños y todas las huellas de integridad. Si algo falla, se conservan los datos anteriores.</div>
-<p>Se restauran los productos, fotografías, tickets, facturas, portada y fechas. La sustitución se realiza mediante una carpeta temporal y una recuperación automática en caso de error.</p>
-
-<h2>11. Si la copia falla</h2>
-<p>Los datos locales no se eliminan. Los productos permanecen en el teléfono y continúan pendientes.</p>
-<p>Comprueba:</p>
-<ul>
-<li>La conexión a Internet.</li>
-<li>Que Google Drive está disponible.</li>
-<li>Que la carpeta seleccionada continúa existiendo.</li>
-<li>Que la aplicación conserva permisos de lectura y escritura.</li>
-<li>Que existe espacio disponible en Drive.</li>
-</ul>
-<p>El apartado <strong>Log de errores</strong>, situado al final del menú, contiene únicamente errores.</p>
-
-<h2>12. Cambio de orientación</h2>
-<p>La aplicación conserva el contenido y el estado de las pantallas al cambiar entre vertical y horizontal. Los campos escritos, archivos seleccionados y operaciones activas no deben perderse por girar el dispositivo.</p>
-
-<h2>13. Recomendaciones</h2>
-<ul>
-<li>Realiza una copia manual antes de desinstalar la aplicación.</li>
-<li>Comprueba que aparece el mensaje de copia completada y verificada.</li>
-<li>Verifica en Drive que existe <code>Tickets_y_Garantias.zip</code>.</li>
-<li>No modifiques el ZIP mientras se está creando o importando.</li>
-<li>Conserva acceso a la cuenta de Google utilizada para guardar la copia.</li>
+<li>En <strong>Configuración → Tamaño del texto</strong> puedes ampliar o reducir el texto de toda la aplicación.</li>
+<li>En las pantallas de la app puedes ampliar el contenido juntando o separando dos dedos.</li>
+<li>Las fotografías y los PDF disponen de su propio zoom y desplazamiento.</li>
 </ul>
 
-<div class="notice"><strong>Resumen:</strong> la aplicación trabaja siempre con los datos locales. Drive conserva una copia completa para recuperación, pero no sustituye al almacenamiento diario del teléfono.</div>
-</article>
+<h2>11. Cambio de orientación</h2>
+<p>Al cambiar entre vertical y horizontal se conserva el contenido de los formularios, los archivos seleccionados y el estado de la pantalla.</p>
+
+<h2>12. Almacenamiento y desinstalación</h2>
+<p>Los productos se guardan en el almacenamiento privado de Android:</p>
+<div class="path">/data/user/0/com.jama.ticketsygarantas/files/</div>
+<p>Al desinstalar la aplicación, Android elimina los productos y archivos locales. El ZIP de Google Drive no se elimina y puede importarse después de reinstalar.</p>
+
+<h2>13. Si ocurre un error</h2>
+<p>El apartado <strong>Log de errores</strong>, situado al final del menú, muestra únicamente fallos. Los errores de Drive no deben eliminar los productos locales.</p>
 </main>
-<footer>Tickets y Garantías · J.A.M.A</footer>
 </body>
 </html>
