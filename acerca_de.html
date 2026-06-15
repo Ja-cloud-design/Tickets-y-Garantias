@@ -5,86 +5,74 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f05a1a">
 <title>Acerca de - Tickets y Garantías</title>
-
 <style>
-:root { --primary:#f05a1a; --primary-dark:#c94710; --text:#252525; --muted:#6d6d6d; --line:#e9e9e9; --soft:#fff5f0; }
+:root { --primary:#f05a1a; --primary-dark:#c94710; --text:#252525; --muted:#666; --line:#e5e5e5; --soft:#fff5f0; --danger:#b3261e; --success:#2e7d32; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-body { margin:0; background:#f6f6f6; color:var(--text); font-family:Arial,Helvetica,sans-serif; line-height:1.6; }
-header { background:var(--primary); color:#fff; }
-.header-inner { max-width:920px; margin:0 auto; padding:26px 18px; }
-.brand { margin:0; font-size:26px; font-weight:700; }
-.subtitle { margin:4px 0 0; opacity:.92; font-size:15px; }
-main { max-width:920px; margin:24px auto; padding:0 14px; }
-.card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:24px; box-shadow:0 4px 18px rgba(0,0,0,.05); }
-h1,h2,h3 { line-height:1.25; }
-h1 { margin:0 0 18px; font-size:28px; }
-h2 { margin:28px 0 10px; font-size:20px; color:var(--primary-dark); }
-h3 { margin:20px 0 8px; font-size:17px; }
-p { margin:0 0 14px; }
-ul { margin:8px 0 16px 20px; padding:0; }
-li { margin:6px 0; }
-.notice { margin:18px 0; padding:14px 16px; background:var(--soft); border-left:4px solid var(--primary); border-radius:8px; }
-.button { display:inline-block; padding:12px 18px; border-radius:9px; background:var(--primary); color:#fff; text-decoration:none; font-weight:700; }
+body { margin:0; background:#fff; color:var(--text); font-family:Arial,Helvetica,sans-serif; font-size:16px; line-height:1.45; }
+main { max-width:920px; margin:0 auto; padding:18px 16px 28px; }
+h1 { margin:0 0 12px; font-size:27px; line-height:1.2; }
+h2 { margin:20px 0 6px; padding-bottom:4px; border-bottom:1px solid var(--line); color:var(--primary-dark); font-size:20px; line-height:1.25; }
+h3 { margin:13px 0 4px; font-size:17px; line-height:1.25; }
+p { margin:0 0 8px; }
+ul,ol { margin:5px 0 10px 21px; padding:0; }
+li { margin:2px 0; }
+.notice { margin:10px 0; padding:10px 12px; background:var(--soft); border-left:4px solid var(--primary); }
+.warning { margin:10px 0; padding:10px 12px; background:#fff8e1; border-left:4px solid #f9a825; }
+.success { margin:10px 0; padding:10px 12px; background:#e8f5e9; border-left:4px solid var(--success); }
+.path { margin:8px 0 10px; padding:9px 11px; background:#f3f3f3; font-family:Consolas,monospace; overflow-wrap:anywhere; }
+.button { display:inline-block; padding:10px 16px; border:0; border-radius:7px; background:var(--primary); color:#fff; text-decoration:none; font-weight:700; }
 .button:hover { background:var(--primary-dark); }
 .meta { color:var(--muted); font-size:14px; }
-footer { max-width:920px; margin:0 auto; padding:8px 18px 30px; color:var(--muted); text-align:center; font-size:13px; }
-.qr { display:block; width:220px; max-width:100%; margin:20px auto; border:10px solid #fff; box-shadow:0 3px 15px rgba(0,0,0,.10); }
 .center { text-align:center; }
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:18px; }
-.box { padding:16px; border:1px solid var(--line); border-radius:10px; background:#fff; }
-strong { color:#111; }
-code { background:#f1f1f1; padding:2px 5px; border-radius:4px; }
-@media (max-width:600px) {
-    .header-inner { padding:20px 16px; }
-    .brand { font-size:22px; }
-    main { margin:14px auto; padding:0 10px; }
-    .card { padding:18px; border-radius:10px; }
-    h1 { font-size:24px; }
-}
+.qr { display:block; width:220px; max-width:100%; margin:14px auto; border:8px solid #fff; box-shadow:0 2px 12px rgba(0,0,0,.12); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:10px; margin:10px 0; }
+.box { padding:10px 12px; border-left:4px solid var(--primary); background:var(--soft); }
+code { background:#f1f1f1; padding:1px 4px; border-radius:3px; overflow-wrap:anywhere; }
+@media (max-width:600px) { main { padding:14px 12px 24px; } h1 { font-size:24px; } h2 { font-size:18px; } .qr { width:200px; } }
 </style>
-
 </head>
 <body>
 <main>
-<article class="card">
 <h1>Acerca de Tickets y Garantías</h1>
-<p>Tickets y Garantías es una aplicación para guardar y organizar de forma sencilla la información relacionada con compras, tickets, facturas, productos, garantías y devoluciones.</p>
-
-<div class="grid">
-<div class="box"><h3>Productos</h3><p>Guarda el nombre del producto, la tienda y sus fechas importantes.</p></div>
-<div class="box"><h3>Fotografías</h3><p>Añade varias fotografías del producto y del ticket, y elige una imagen de portada.</p></div>
-<div class="box"><h3>Facturas PDF</h3><p>Adjunta una o varias facturas o documentos en formato PDF.</p></div>
-<div class="box"><h3>Google Drive</h3><p>Selecciona manualmente la carpeta donde deseas almacenar los datos y archivos.</p></div>
-</div>
+<div class="notice"><strong>Tickets y Garantías</strong> permite guardar y organizar productos, tickets, facturas, fotografías, fechas de garantía y datos adicionales desde un único lugar.</div>
 
 <h2>Funciones principales</h2>
+<div class="grid">
+<div class="box"><h3>Productos</h3><p>Guarda el nombre, la tienda, la fecha de compra, la garantía y cualquier dato adicional que necesites.</p></div>
+<div class="box"><h3>Fotografías</h3><p>Añade fotografías del producto y del ticket, elige una portada y amplía las imágenes mediante gestos.</p></div>
+<div class="box"><h3>Facturas PDF</h3><p>Adjunta una o varias facturas y ábrelas directamente desde la ficha del producto.</p></div>
+<div class="box"><h3>Avisos de garantía</h3><p>Recibe una notificación configurable antes de que finalice la garantía de cada producto.</p></div>
+</div>
+
+<h2>Organización</h2>
 <ul>
 <li>Listado visual y compacto de productos.</li>
-<li>Buscador por producto, tienda o identificador.</li>
-<li>Ordenación por nombre, fecha de compra, garantía o devolución.</li>
-<li>Fotografía de portada ampliable mediante gestos.</li>
-<li>Almacenamiento local previo y sincronización posterior con Drive.</li>
-<li>Funcionamiento con Wi-Fi o datos móviles.</li>
-<li>Cola de sincronización cuando no hay conexión.</li>
-<li>Log local dedicado únicamente a errores.</li>
+<li>Búsqueda por nombre, tienda, identificador o datos adicionales.</li>
+<li>Ordenación por nombre, fecha de compra, fecha de garantía o fecha de creación.</li>
+<li>Filtro para ocultar garantías caducadas.</li>
+<li>Ajuste global del tamaño del texto y zoom mediante gestos.</li>
 </ul>
 
-<h2>Privacidad</h2>
-<p>La aplicación no necesita un servidor propio para almacenar los productos. Los datos permanecen en el dispositivo y en la carpeta de Google Drive elegida por el usuario.</p>
+<h2>Almacenamiento y copias de seguridad</h2>
+<p>Los productos y archivos guardados en el teléfono son siempre los datos auténticos. La aplicación genera una única copia completa y visible en la carpeta de Google Drive seleccionada por el usuario.</p>
+<div class="path">Tickets_y_Garantias.zip</div>
+<p>La copia contiene los productos, fotografías, tickets, facturas PDF y un manifiesto de integridad. También puede importarse para restaurar completamente la información después de reinstalar la aplicación.</p>
 
-<h2>Diseño</h2>
-<p>La interfaz utiliza una identidad visual blanca y naranja, con el color principal <code>#f05a1a</code>, y está pensada para ofrecer una navegación clara y rápida.</p>
+<h2>Privacidad</h2>
+<p>La aplicación no utiliza un servidor propio para almacenar productos. Los datos permanecen en el almacenamiento privado del dispositivo y en la carpeta de Google Drive seleccionada expresamente por el usuario.</p>
+<p>La versión actual no incluye publicidad, analítica ni sistemas destinados a vender información personal.</p>
+
+<h2>Diseño y accesibilidad</h2>
+<p>La interfaz utiliza una identidad visual blanca y naranja, con el color principal <code>#f05a1a</code>. Está diseñada para ofrecer una navegación clara, conservar el estado al cambiar la orientación y permitir ampliar el contenido cuando sea necesario.</p>
 
 <h2>Versión</h2>
-<p>La versión instalada se muestra dentro del menú lateral y en la propia pantalla de información de la aplicación.</p>
+<p>La versión instalada se muestra en el menú lateral de la aplicación.</p>
 
 <h2>Desarrollador</h2>
 <p><strong>J.A.M.A</strong></p>
 
-<div class="notice">Tickets y Garantías continúa en desarrollo. Las funciones y el diseño pueden mejorar en versiones posteriores.</div>
-</article>
+<div class="notice">Tickets y Garantías continúa en desarrollo. Sus funciones y diseño pueden mejorar en versiones posteriores.</div>
 </main>
-<footer>Tickets y Garantías · J.A.M.A</footer>
 </body>
 </html>
