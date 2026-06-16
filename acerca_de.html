@@ -6,73 +6,36 @@
 <meta name="theme-color" content="#f05a1a">
 <title>Acerca de - Tickets y Garantías</title>
 <style>
-:root { --primary:#f05a1a; --primary-dark:#c94710; --text:#252525; --muted:#666; --line:#e5e5e5; --soft:#fff5f0; --danger:#b3261e; --success:#2e7d32; }
+:root { --primary:#f05a1a; --primary-dark:#c94710; --text:#252525; --line:#e5e5e5; --soft:#fff5f0; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:#fff; color:var(--text); font-family:Arial,Helvetica,sans-serif; font-size:16px; line-height:1.45; }
 main { max-width:920px; margin:0 auto; padding:18px 16px 28px; }
 h1 { margin:0 0 12px; font-size:27px; line-height:1.2; }
 h2 { margin:20px 0 6px; padding-bottom:4px; border-bottom:1px solid var(--line); color:var(--primary-dark); font-size:20px; line-height:1.25; }
-h3 { margin:13px 0 4px; font-size:17px; line-height:1.25; }
 p { margin:0 0 8px; }
-ul,ol { margin:5px 0 10px 21px; padding:0; }
+ul { margin:5px 0 10px 21px; padding:0; }
 li { margin:2px 0; }
 .notice { margin:10px 0; padding:10px 12px; background:var(--soft); border-left:4px solid var(--primary); }
-.warning { margin:10px 0; padding:10px 12px; background:#fff8e1; border-left:4px solid #f9a825; }
-.success { margin:10px 0; padding:10px 12px; background:#e8f5e9; border-left:4px solid var(--success); }
-.path { margin:8px 0 10px; padding:9px 11px; background:#f3f3f3; font-family:Consolas,monospace; overflow-wrap:anywhere; }
-.button { display:inline-block; padding:10px 16px; border:0; border-radius:7px; background:var(--primary); color:#fff; text-decoration:none; font-weight:700; }
-.button:hover { background:var(--primary-dark); }
-.meta { color:var(--muted); font-size:14px; }
-.center { text-align:center; }
-.qr { display:block; width:220px; max-width:100%; margin:14px auto; border:8px solid #fff; box-shadow:0 2px 12px rgba(0,0,0,.12); }
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:10px; margin:10px 0; }
-.box { padding:10px 12px; border-left:4px solid var(--primary); background:var(--soft); }
-code { background:#f1f1f1; padding:1px 4px; border-radius:3px; overflow-wrap:anywhere; }
-@media (max-width:600px) { main { padding:14px 12px 24px; } h1 { font-size:24px; } h2 { font-size:18px; } .qr { width:200px; } }
+@media (max-width:600px) { main { padding:14px 12px 24px; } h1 { font-size:24px; } h2 { font-size:18px; } }
 </style>
 </head>
 <body>
 <main>
-<h1>Acerca de Tickets y Garantías</h1>
-<div class="notice"><strong>Tickets y Garantías</strong> permite guardar y organizar productos, tickets, facturas, fotografías, fechas de garantía y datos adicionales desde un único lugar.</div>
-
-<h2>Funciones principales</h2>
-<div class="grid">
-<div class="box"><h3>Productos</h3><p>Guarda el nombre, la tienda, la fecha de compra, la garantía y cualquier dato adicional que necesites.</p></div>
-<div class="box"><h3>Fotografías</h3><p>Añade fotografías del producto y del ticket, elige una portada y amplía las imágenes mediante gestos.</p></div>
-<div class="box"><h3>Facturas PDF</h3><p>Adjunta una o varias facturas y ábrelas directamente desde la ficha del producto.</p></div>
-<div class="box"><h3>Avisos de garantía</h3><p>Recibe una notificación configurable antes de que finalice la garantía de cada producto.</p></div>
-</div>
-
-<h2>Organización</h2>
+<h1>Tickets y Garantías</h1>
+<div class="notice"><strong>Tickets y Garantías</strong> te permite centralizar y organizar fácilmente toda la información de tus compras y productos.</div>
+<p>Guarda en un mismo lugar dónde y cuándo compraste cada producto, su fecha límite de garantía y toda la documentación relacionada, como facturas, tickets, fotografías o archivos adicionales.</p>
+<p>Gracias a su sistema de notificaciones, recibirás un aviso cuando la garantía de un producto esté próxima a finalizar. Así podrás revisar su estado, realizar una reclamación o gestionar cualquier incidencia antes de que venza el plazo.</p>
+<p>La aplicación cuenta con una interfaz intuitiva y fácil de utilizar, diseñada para que puedas consultar y gestionar tus productos de forma rápida y sencilla.</p>
+<p>También podrás realizar copias de seguridad manuales o programadas y restaurarlas cuando lo necesites, manteniendo tus datos protegidos y bajo control.</p>
+<h2>El sistema de ordenación te permite organizar los productos por:</h2>
 <ul>
-<li>Listado visual y compacto de productos.</li>
-<li>Búsqueda por nombre, tienda, identificador o datos adicionales.</li>
-<li>Ordenación por nombre, fecha de compra, fecha de garantía o fecha de creación.</li>
-<li>Filtro para ocultar garantías caducadas.</li>
-<li>Ajuste global del tamaño del texto y zoom mediante gestos.</li>
+<li>Fecha de compra.</li>
+<li>Fecha límite de garantía.</li>
+<li>Fecha de creación.</li>
+<li>Nombre del producto.</li>
 </ul>
-
-<h2>Almacenamiento y copias de seguridad</h2>
-<p>Los productos y archivos guardados en el teléfono son siempre los datos auténticos. La aplicación genera una única copia completa y visible en la carpeta de Google Drive seleccionada por el usuario.</p>
-<div class="path">Tickets_y_Garantias.zip</div>
-<p>La copia contiene los productos, fotografías, tickets, facturas PDF y un manifiesto de integridad. También puede importarse para restaurar completamente la información después de reinstalar la aplicación.</p>
-
-<h2>Privacidad</h2>
-<p>La aplicación no utiliza un servidor propio para almacenar productos. Los datos permanecen en el almacenamiento privado del dispositivo y en la carpeta de Google Drive seleccionada expresamente por el usuario.</p>
-<p>La versión actual no incluye publicidad, analítica ni sistemas destinados a vender información personal.</p>
-
-<h2>Diseño y accesibilidad</h2>
-<p>La interfaz utiliza una identidad visual blanca y naranja, con el color principal <code>#f05a1a</code>. Está diseñada para ofrecer una navegación clara, conservar el estado al cambiar la orientación y permitir ampliar el contenido cuando sea necesario.</p>
-
-<h2>Versión</h2>
-<p>La versión instalada se muestra en el menú lateral de la aplicación.</p>
-
-<h2>Desarrollador</h2>
-<p><strong>J.A.M.A</strong></p>
-
-<div class="notice">Tickets y Garantías continúa en desarrollo. Sus funciones y diseño pueden mejorar en versiones posteriores.</div>
+<div class="notice"><strong>Toda la información de tus compras, tickets y garantías siempre organizada y disponible.</strong></div>
 </main>
 </body>
 </html>
