@@ -17,101 +17,69 @@ ul,ol { margin:5px 0 10px 21px; padding:0; }
 li { margin:2px 0; }
 .notice { margin:10px 0; padding:10px 12px; background:var(--soft); border-left:4px solid var(--primary); }
 .warning { margin:10px 0; padding:10px 12px; background:#fff8e1; border-left:4px solid #f9a825; }
-.error { margin:10px 0; padding:10px 12px; background:#ffebee; border-left:4px solid var(--danger); }
-.success { margin:10px 0; padding:10px 12px; background:#e8f5e9; border-left:4px solid var(--success); }
-.path { margin:8px 0 10px; padding:9px 11px; background:#f3f3f3; font-family:Consolas,monospace; overflow-wrap:anywhere; }
 .status { display:inline-block; padding:2px 7px; border-radius:10px; font-size:12px; font-weight:bold; }
 .pending { background:#fff3cd; color:#745500; }
 .synced { background:#e8f5e9; color:#216e2b; }
-code { background:#f1f1f1; padding:1px 4px; border-radius:3px; overflow-wrap:anywhere; }
 @media (max-width:600px) { main { padding:14px 12px 24px; } h1 { font-size:24px; } h2 { font-size:18px; } }
 </style>
 </head>
 <body>
 <main>
 <h1>Instrucciones de funcionamiento</h1>
-<div class="notice"><strong>Funcionamiento principal:</strong> los productos y archivos guardados en el teléfono son los datos auténticos. Google Drive conserva una única copia completa de seguridad.</div>
+<div class="notice"><strong>Importante:</strong> los datos se guardan en el teléfono. En Google Drive se guarda las copias de seguridad.</div>
 
 <h2>1. Configuración inicial</h2>
-<p>La primera vez que se abre la aplicación es obligatorio seleccionar o crear la carpeta de Google Drive donde se guardará la copia.</p>
-<ol>
-<li>Pulsa <strong>Seleccionar o crear carpeta</strong>.</li>
-<li>Selecciona una carpeta de Google Drive o crea una nueva.</li>
-<li>Comprueba la ruta mostrada y pulsa <strong>Continuar</strong>.</li>
-</ol>
-<div class="path">Google Drive / carpeta seleccionada / Tickets_y_Garantias.zip</div>
+<p>La primera vez es obligatorio seleccionar o crear una carpeta en Google Drive. Sin configurar esa carpeta no se puede continuar utilizando la aplicación.</p>
+
 
 <h2>2. Listado de productos</h2>
 <ul>
-<li>Utiliza <strong>Buscar</strong> para localizar productos por nombre, tienda, ID o datos adicionales.</li>
-<li>El botón de ordenación permite ordenar por nombre, fecha de compra, fecha de garantía o fecha de creación.</li>
-<li>Marca <strong>Ocultar garantías caducadas</strong> para no mostrar los productos cuya garantía ya finalizó.</li>
-<li>Pulsa una ficha para abrirla o modificarla.</li>
-<li>Pulsa la fotografía de portada para verla ampliada.</li>
+<li>Utiliza <strong>Buscar</strong> para localizar productos.</li>
+<li>Ordena por nombre, fecha de compra, fecha límite de garantía o fecha de creación.</li>
+<li>Marca <strong>Ocultar garantías finalizadas</strong> para ocultar los productos cuya garantía terminó.</li>
+<li>Pulsa un producto para abrirlo o modificarlo.</li>
+<li>Pulsa <strong>Añadir</strong> para crear uno nuevo.</li>
 </ul>
 
-<h2>3. Crear o editar un producto</h2>
-<p>Los datos obligatorios son el nombre, la fecha de compra, la fecha límite de garantía y al menos una foto del ticket o una factura PDF.</p>
-<p>La tienda, las fotografías del producto y <strong>Datos adicionales</strong> son opcionales. Datos adicionales permite guardar números de serie, observaciones, condiciones, teléfonos u otra información útil.</p>
-<p>La aplicación ya no utiliza el campo Fecha límite de devolución.</p>
-<div class="success">Cuando el producto queda guardado correctamente en el teléfono aparece el mensaje <strong>Guardado</strong>.</div>
-
-<h2>4. Fotografías, tickets y facturas</h2>
+<h2>3. Añadir o editar un producto</h2>
+<p>Completa el nombre, la fecha de compra y la fecha límite de garantía.</p>
+<p>Debes añadir al menos una fotografía del ticket o un archivo en <strong>Facturas o documentos en PDF</strong>.</p>
 <ul>
-<li>Puedes hacer fotografías o elegir imágenes existentes.</li>
-<li>Puedes añadir varias fotografías del producto y del ticket.</li>
-<li>Puedes añadir una o varias facturas PDF.</li>
-<li>Pulsa una fotografía o un PDF para inspeccionarlo.</li>
-<li>Los archivos seleccionados se copian al almacenamiento privado de la aplicación.</li>
+<li><strong>Fotos del producto:</strong> imágenes opcionales del artículo.</li>
+<li><strong>Fotos del ticket:</strong> una o varias fotografías del justificante de compra.</li>
+<li><strong>Añadir PDF:</strong> facturas u otra documentación en formato PDF.</li>
+<li><strong>Datos adicionales:</strong> números de serie, observaciones u otra información útil.</li>
 </ul>
+<p>Pulsa <strong>Guardar</strong> para conservar los cambios.</p>
 
-<h2>5. Garantía finalizada y avisos</h2>
-<p>Cuando la garantía ha vencido, la ficha muestra el sello <strong>FINALIZADA</strong>.</p>
-<p>En <strong>Configuración → Aviso finalización garantía</strong> puedes indicar los días de antelación. Se genera una notificación independiente por producto y al pulsarla se abre directamente su ficha.</p>
-
-<h2>6. Estados de la copia</h2>
-<p><span class="status pending">PENDIENTE</span> El producto está guardado en el teléfono, pero todavía no forma parte de la última copia confirmada.</p>
-<p><span class="status synced">SINCRONIZADO</span> El producto está incluido en el ZIP guardado y comprobado en la carpeta seleccionada.</p>
-<p>Un producto pendiente continúa existiendo localmente y puede abrirse, editarse o eliminarse.</p>
-
-<h2>7. Copia completa en Google Drive</h2>
-<p>La aplicación mantiene un único archivo visible:</p>
-<div class="path">Tickets_y_Garantias.zip</div>
-<ol>
-<li>Lee todos los productos y archivos locales.</li>
-<li>Genera un ZIP completo con un manifiesto de tamaños y huellas SHA-256.</li>
-<li>Valida el ZIP antes de escribirlo en Drive.</li>
-<li>Conserva la copia anterior mientras prepara y comprueba la nueva.</li>
-<li>Solo después de verificar la nueva copia sustituye la anterior.</li>
-</ol>
-<div class="warning">La copia solo se intenta con una conexión Wi-Fi validada. Si no hay Wi-Fi, la copia anterior debe permanecer intacta.</div>
-<div class="error">Sin la API oficial de Drive, Android puede confirmar que la aplicación de Drive ha aceptado el archivo, pero no informa del instante exacto en que termina la subida al servidor.</div>
-
-<h2>8. Copia manual y frecuencia backup</h2>
-<p>Pulsa el icono de sincronización de la barra superior para generar una copia inmediata.</p>
-<p>En <strong>Configuración → Frecuencia backup</strong> puedes indicar cada cuántas horas debe intentarse la copia automática.</p>
-
-<h2>9. Restaurar una copia</h2>
-<p>En <strong>Configuración → Restaurar una copia</strong> puedes importar <code>Tickets_y_Garantias.zip</code>.</p>
-<p>La importación valida primero todo el contenido. Si es correcta, sustituye los productos y archivos locales. Si falla, conserva los datos existentes.</p>
-
-<h2>10. Tamaño de texto y zoom</h2>
+<h2>4. Configuración</h2>
+<p>Desde <strong>Configuración</strong> puedes:</p>
 <ul>
-<li>En <strong>Configuración → Tamaño del texto</strong> puedes ampliar o reducir el texto de toda la aplicación.</li>
-<li>En las pantallas de la app puedes ampliar el contenido juntando o separando dos dedos.</li>
-<li>Las fotografías y los PDF disponen de su propio zoom y desplazamiento.</li>
+<li>Seleccionar o cambiar la carpeta de Google Drive donde se guardan las copias.</li>
+<li>Indicar cada cuántas horas se intentará realizar una copia automática.</li>
+<li>Elegir cuántas copias de seguridad quieres conservar.</li>
+<li>Indicar los años de garantía que se añadirán por defecto a la fecha de compra.</li>
+<li>Elegir con cuántos días de antelación quieres recibir el aviso de finalización de la garantía.</li>
 </ul>
+<h2>5. Copias de seguridad</h2>
+<p>Pulsa el icono de copia de la barra superior para crear una copia manual.</p>
+<p>En <strong>Configuración</strong> puedes indicar la frecuencia de las copias automáticas y cuántas copias quieres conservar.</p>
+<ul>
+<li>Solo se cuentan las copias terminadas correctamente.</li>
+<li>Cuando se supera el límite configurado, se elimina la copia correcta más antigua.</li>
+<li>Si no hay una conexión Wi-Fi válida o la copia falla, no se elimina ninguna copia anterior.</li>
+<li>La fecha y hora de la última copia correcta aparece en la parte inferior del menú lateral.</li>
+</ul>
+<p><span class="status pending">PENDIENTE</span> El producto todavía no está incluido en una copia confirmada.</p>
 
-<h2>11. Cambio de orientación</h2>
-<p>Al cambiar entre vertical y horizontal se conserva el contenido de los formularios, los archivos seleccionados y el estado de la pantalla.</p>
 
-<h2>12. Almacenamiento y desinstalación</h2>
-<p>Los productos se guardan en el almacenamiento privado de Android:</p>
-<div class="path">/data/user/0/com.jama.ticketsygarantias/files/</div>
-<p>Al desinstalar la aplicación, Android elimina los productos y archivos locales. El ZIP de Google Drive no se elimina y puede importarse después de reinstalar.</p>
+<h2>6. Restaurar una copia</h2>
+<p>En <strong>Menú lateral → Importar copia ZIP</strong> selecciona uno de los archivos ZIP creados por la aplicación.</p>
+<p>La copia se comprueba antes de restaurarse. Si no es válida, los datos actuales se conservan.</p>
 
-<h2>13. Si ocurre un error</h2>
-<p>El apartado <strong>Log de errores</strong>, situado al final del menú, muestra únicamente fallos. Los errores de Drive no deben eliminar los productos locales.</p>
+<h2>7. Datos y desinstalación</h2>
+<p>Los productos y archivos permanecen en el almacenamiento (local) privado de la aplicación . Al desinstalarla se eliminan del teléfono, pero las copias guardadas en Google Drive permanecen disponibles para restaurarlas.</p>
+
 </main>
 </body>
 </html>
